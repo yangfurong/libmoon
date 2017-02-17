@@ -224,7 +224,7 @@ end
 --- Set the total length.
 --- @param int Length of the packet excluding layer 2. 16 bit integer.
 function ip4Header:setLength(int)
-	int = int or 48	-- with eth + UDP -> minimum 64
+	int = int or 46	-- with eth + UDP -> minimum 64
 	self.len = hton16(int)
 end
 

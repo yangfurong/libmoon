@@ -165,7 +165,7 @@ function mod.startTask(...)
 	local socket = getBestSocket(devices)
 	local core = getCoreOnSocket(socket)
 	if not core then
-		core = getCoreOnSocket()
+		core = getCoreOnSocket(-1)
 		if core then
 			log:warn("Tried to map task to socket %d, but all cores are in use. Using different socket.", socket)
 		end
